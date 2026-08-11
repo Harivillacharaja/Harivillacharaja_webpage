@@ -142,8 +142,19 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center;height:1
 }
 .hero-bg::after{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg, rgba(42,12,14,.55), rgba(42,12,14,.78) 55%, var(--maroon-deep) 100%);
-}
+background:
+  radial-gradient(
+    circle at 50% 0%,
+    rgba(212, 160, 70, 0.12) 0%,
+    rgba(212, 160, 70, 0) 45%
+  ),
+  linear-gradient(
+    180deg,
+    #5A2024 0%,
+    #421519 35%,
+    #2F0F12 70%,
+    #2A0C0E 100%
+  );}
 .petals{position:absolute;inset:0;overflow:hidden;z-index:-1;pointer-events:none}
 .petal{
   position:absolute;top:-8%;width:10px;height:10px;border-radius:50% 0;
