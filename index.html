@@ -1,1020 +1,1879 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harivilla Cha Raja — Ganesh Mandal</title>
-<link rel="icon" type="image/png" href="assets/logo.png">
-<meta name="description" content="Harivilla Cha Raja — a community Ganesh Mandal in Ahmedabad. Join us for Murti Sthapana, Cultural Nights, Aarti and Visarjan.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Mukta:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --maroon:#4A1416;
-  --maroon-deep:#2A0C0E;
-  --vermillion:#C1440E;
-  --marigold:#F2A900;
-  --marigold-pale:#FBD473;
-  --brass:#9C7A24;
-  --cream:#FBF3E2;
-  --cream-2:#F3E7CC;
-  --ink:#2B1710;
-  --ink-soft:#6b5344;
-  --shadow: 0 10px 30px rgba(51,13,15,.14);
-  --nav-h: 68px;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{
-    scroll-behavior:smooth;
-    overflow-x:hidden;
-}
-body{
-  font-family:'Mukta',sans-serif;
-  background:var(--cream);
-  color:var(--ink);
-  line-height:1.65;
-  overflow-x:hidden;
-  min-width:280px;
-}
-body.menu-open{overflow:hidden}
-img{max-width:100%;display:block;border-radius: inherit}
-h1,h2,h3,.display{font-family:'Yatra One',cursive;font-weight:400;letter-spacing:.3px}
-a{color:inherit}
-.wrap{width:100%;max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,28px)}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harivilla Cha Raja — Ganesh Mandal</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <meta name="description"
+    content="Harivilla Cha Raja — a community Ganesh Mandal in Ahmedabad. Join us for Murti Sthapana, Cultural Nights, Aarti and Visarjan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Mukta:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --maroon: #4A1416;
+      --maroon-deep: #2A0C0E;
+      --vermillion: #C1440E;
+      --marigold: #F2A900;
+      --marigold-pale: #FBD473;
+      --brass: #9C7A24;
+      --cream: #FBF3E2;
+      --cream-2: #F3E7CC;
+      --ink: #2B1710;
+      --ink-soft: #6b5344;
+      --shadow: 0 10px 30px rgba(51, 13, 15, .14);
+      --nav-h: 68px;
+    }
 
-.eyebrow{
-  font-family:'Mukta',sans-serif;font-weight:700;letter-spacing:.28em;
-  text-transform:uppercase;font-size:.7rem;color:var(--vermillion);
-  display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px;
-}
-.eyebrow::before,.eyebrow::after{content:"";width:24px;height:1px;background:var(--brass);flex:none}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
 
-/* ---------- Progress bar ---------- */
-.progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--vermillion),var(--marigold));width:0%;z-index:200;transition:width .1s linear}
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
 
-/* ---------- Nav ---------- */
-nav{
-  position:sticky;top:0;z-index:100;height:var(--nav-h);
-  background:rgba(251,243,226,.9);backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(212,175,55,.35);
-  display:flex;align-items:center;transition:box-shadow .3s ease, height .3s ease;
-}
-nav.scrolled{box-shadow:0 6px 24px rgba(51,13,15,.12);--nav-h:60px}
-nav .wrap{display:flex;justify-content:space-between;align-items:center;height:100%}
-.brand{display:flex;align-items:center;gap:10px;min-width:0;text-decoration:none;flex:1 1 auto}
-.brand-logo{width:60px;height:60px;flex:none;transition:transform .3s ease}
-.brand:hover .brand-logo{transform:rotate(12deg) scale(1.06)}
-.brand span{
-  font-family:'Yatra One',cursive;font-size:1.15rem;color:var(--maroon);
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-}
-.navlinks{display:flex;gap:2px;align-items:center;flex:none}
-.navlinks a{
-  position:relative;text-decoration:none;color:var(--ink-soft);font-weight:600;
-  font-size:.9rem;padding:9px 15px;border-radius:999px;transition:.25s;white-space:nowrap;
-}
-.navlinks a.active{color:var(--maroon)}
-.navlinks a.active::after{
-  content:"";position:absolute;left:15px;right:15px;bottom:3px;height:2px;
-  background:var(--marigold);border-radius:2px;
-}
-.navlinks a:hover,.navlinks a:focus-visible{background:var(--maroon);color:var(--cream);outline:none}
-.navlinks a:hover::after{display:none}
+    body {
+      font-family: 'Mukta', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.65;
+      overflow-x: hidden;
+      min-width: 280px;
+    }
 
-.nav-toggle{
-  display:none;flex:none;width:42px;height:42px;border-radius:10px;
-  border:1px solid var(--marigold-pale);background:#fff;
-  align-items:center;justify-content:center;flex-direction:column;gap:5px;
-  cursor:pointer;z-index:110;
-}
-.nav-toggle span{width:20px;height:2px;background:var(--maroon);border-radius:2px;transition:.25s ease}
-.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
-.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    body.menu-open {
+      overflow: hidden
+    }
 
-.nav-backdrop{
-  position:fixed;inset:0;background:rgba(42,12,14,.45);z-index:90;
-  opacity:0;pointer-events:none;transition:opacity .25s ease;
-}
-.nav-backdrop.show{opacity:1;pointer-events:auto}
+    img {
+      max-width: 100%;
+      display: block;
+      border-radius: inherit
+    }
 
-@media (max-width:880px){
-  .nav-toggle{display:flex}
-  .navlinks{
-    position:fixed;
-    top:0;
-    right:-320px;
-    height:100dvh;
-    width:min(78vw,320px);
-    z-index:100;
-    flex-direction:column;
-    align-items:stretch;
-    gap:2px;
-    background:var(--cream);
-    padding:calc(var(--nav-h) + 20px) 20px 30px;
-    transition:right .3s ease;
-    box-shadow:-14px 0 30px rgba(51,13,15,.18);
-    overflow-y:auto;
-}
-  .navlinks.open{
-    right:0;
-  }
-  .navlinks a{
-    padding:16px 14px;font-size:1.05rem;border-radius:12px;
-    border-bottom:1px solid var(--cream-2);
-  }
-  .navlinks a.active::after{display:none}
-  .navlinks a.active{background:var(--cream-2)}
-}
+    h1,
+    h2,
+    h3,
+    .display {
+      font-family: 'Yatra One', cursive;
+      font-weight: 400;
+      letter-spacing: .3px
+    }
 
-/* ---------- Hero ---------- */
-.hero{
-  position:relative;min-height:100vh;min-height:100dvh;
-  display:flex;flex-direction:column;justify-content:center;align-items:center;
-  text-align:center;color:var(--cream);
-  padding:calc(var(--nav-h) + 40px) 20px 90px;
-  isolation:isolate;
-}
-.hero-bg{
-  position:absolute;inset:0;z-index:-2;
-  background:url('assets/hero-idol.jpg') center 22%/cover no-repeat;
-}
-.hero-bg::after{
-  content:"";position:absolute;inset:0;
-background:
-  radial-gradient(
-    circle at 50% 0%,
-    rgba(212, 160, 70, 0.12) 0%,
-    rgba(212, 160, 70, 0) 45%
-  ),
-  linear-gradient(
-    180deg,
-    #5A2024 0%,
-    #421519 35%,
-    #2F0F12 70%,
-    #2A0C0E 100%
-  );}
-.petals{position:absolute;inset:0;overflow:hidden;z-index:-1;pointer-events:none}
-.petal{
-  position:absolute;top:-8%;width:10px;height:10px;border-radius:50% 0;
-  background:var(--marigold);opacity:.75;
-  animation:fall linear infinite;
-}
-@keyframes fall{
-  0%{transform:translateY(0) translateX(0) rotate(0deg);opacity:0}
-  10%{opacity:.85}
-  90%{opacity:.7}
-  100%{transform:translateY(112vh) translateX(var(--drift,30px)) rotate(300deg);opacity:0}
-}
-.garland{
-  position:absolute;top:0;left:0;right:0;height:30px;z-index:1;
-  background-image: radial-gradient(circle, var(--marigold) 0 5px, transparent 6px);
-  background-size:30px 30px;background-position:center 6px;opacity:.9;
-}
-.hero-arch{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:clamp(40px,8vw,90px);z-index:1}
-.hero-arch svg{width:100%;height:100%;display:block}
+    a {
+      color: inherit
+    }
 
-.hero .kicker{
-  font-weight:700;letter-spacing:.32em;text-transform:uppercase;
-  font-size:clamp(.66rem,2vw,.78rem);color:var(--marigold-pale);margin-bottom:16px;
-}
-.hero h1{font-size:clamp(2.3rem,8vw,4.6rem);text-shadow:0 4px 24px rgba(0,0,0,.4);
-  animation:riseIn .9s ease both;}
-.hero h3{
-  font-weight:500;font-size:clamp(1rem,3vw,1.15rem);
-  color:var(--marigold-pale);margin-top:10px;animation:riseIn .9s ease .1s both;
-}
-@keyframes riseIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+    .wrap {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding-inline: clamp(16px, 4vw, 28px)
+    }
 
-.muhurat{
-  margin-top:clamp(24px,5vw,34px);border:1px solid rgba(242,169,0,.5);
-  background:rgba(42,12,14,.5);
-  padding:16px 24px;border-radius:16px;backdrop-filter:blur(4px);
-  width:100%;max-width:320px;
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  animation:riseIn .9s ease .2s both;
-}
-.flame{width:20px;height:26px;flex:none;animation:flicker 1.6s ease-in-out infinite}
-@keyframes flicker{
-  0%,100%{transform:scale(1) rotate(0deg)}
-  25%{transform:scale(1.05,.95) rotate(-2deg)}
-  50%{transform:scale(.95,1.05) rotate(2deg)}
-  75%{transform:scale(1.03,.97) rotate(-1deg)}
-}
-.muhurat-text{text-align:left}
-.muhurat .label{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--marigold-pale);font-weight:700}
-#countdown{
-  font-family:'Yatra One',cursive;font-size:clamp(1.25rem,5vw,1.8rem);margin-top:4px;color:var(--marigold);
-  text-shadow:0 0 18px rgba(242,169,0,.45);
-}
-.hero-ctas{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;width:100%;max-width:420px;
-  animation:riseIn .9s ease .3s both;}
-.btn{
-  background:var(--vermillion);padding:13px 24px;border-radius:999px;color:#fff;
-  text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.02em;
-  display:inline-flex;align-items:center;justify-content:center;gap:6px;
-  box-shadow:0 8px 20px rgba(193,68,14,.35);
-  transition:transform .2s ease, box-shadow .2s ease;
-  flex:1 1 150px;max-width:220px;position:relative;overflow:hidden;
-}
-.btn::before{
-  content:"";position:absolute;inset:0;background:rgba(255,255,255,.25);
-  transform:translateX(-110%) skewX(-15deg);transition:transform .5s ease;
-}
-.btn:hover::before{transform:translateX(110%) skewX(-15deg)}
-.btn:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(193,68,14,.45)}
-.btn.ghost{background:transparent;border:1.5px solid var(--marigold-pale);box-shadow:none}
-.btn.ghost:hover{background:rgba(242,169,0,.14)}
+    .eyebrow {
+      font-family: 'Mukta', sans-serif;
+      font-weight: 700;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      font-size: .7rem;
+      color: var(--vermillion);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
 
-.scroll-cue{
-  position:absolute;bottom:18px;left:50%;transform:translateX(-50%);z-index:2;
-  width:24px;height:38px;border:2px solid rgba(251,243,226,.55);border-radius:14px;
-}
-.scroll-cue::before{
-  content:"";position:absolute;top:6px;left:50%;width:4px;height:8px;margin-left:-2px;
-  background:var(--marigold-pale);border-radius:2px;animation:scrollcue 1.6s ease infinite;
-}
-@keyframes scrollcue{0%{opacity:1;top:6px}70%{opacity:0;top:20px}100%{opacity:0;top:6px}}
+    .eyebrow::before,
+    .eyebrow::after {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: var(--brass);
+      flex: none
+    }
 
-/* ---------- Sections ---------- */
-section{padding:clamp(56px,9vw,96px) 0 clamp(46px,7vw,72px)}
-.section-inner{width:100%;max-width:1080px;margin:auto;padding-inline:clamp(16px,4vw,28px)}
-h2{text-align:center;color:var(--maroon);font-size:clamp(1.75rem,5vw,2.6rem);margin-bottom:8px}
-.section-sub{text-align:center;color:var(--ink-soft);max-width:560px;margin:0 auto clamp(30px,5vw,44px);font-size:1rem}
+    /* ---------- Progress bar ---------- */
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--vermillion), var(--marigold));
+      width: 0%;
+      z-index: 200;
+      transition: width .1s linear
+    }
 
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)}
-.reveal.in{opacity:1;transform:none}
-.stagger.in > *{opacity:1;transform:none}
-.stagger > *{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
-.stagger.in > *:nth-child(1){transition-delay:.05s}
-.stagger.in > *:nth-child(2){transition-delay:.13s}
-.stagger.in > *:nth-child(3){transition-delay:.21s}
-.stagger.in > *:nth-child(4){transition-delay:.29s}
-.stagger.in > *:nth-child(5){transition-delay:.37s}
-.stagger.in > *:nth-child(6){transition-delay:.45s}
+    /* ---------- Nav ---------- */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      background: rgba(251, 243, 226, .9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(212, 175, 55, .35);
+      display: flex;
+      align-items: center;
+      transition: box-shadow .3s ease, height .3s ease;
+    }
 
-.divider{width:100%;height:clamp(28px,5vw,50px);display:block;line-height:0}
-.divider svg{width:100%;height:100%;display:block}
+    nav.scrolled {
+      box-shadow: 0 6px 24px rgba(51, 13, 15, .12);
+      --nav-h: 60px
+    }
 
-/* About */
-.about-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,44px);align-items:center}
-.about-card{
-  background:#fff;border-radius:18px;padding:clamp(24px,4vw,36px);box-shadow:var(--shadow);
-  border-top:4px solid var(--marigold);
-}
-.about-card h3{color:var(--maroon);font-size:1.35rem}
-.about-card p{color:var(--ink-soft);margin-top:14px}
-.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
-.stat{background:var(--cream-2);border-radius:12px;padding:16px;text-align:center}
-.stat b{display:block;font-family:'Yatra One',cursive;font-size:clamp(1.4rem,4vw,1.7rem);color:var(--vermillion)}
-.stat span{font-size:.75rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.08em}
-.about-art{
-  aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);
-  border:6px solid #fff;outline:2px solid var(--marigold-pale);position:relative;
-}
-.about-art img{width:100%;height:100%;object-fit:cover;object-position:center 90%;transition:transform .6s ease}
-.about-art:hover img{transform:scale(1.06)}
+    nav .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%
+    }
 
-@media (max-width:860px){
-  .about-wrap{grid-template-columns:1fr}
-  .about-art{order:-1;aspect-ratio:16/10;max-width:480px;margin-inline:auto;width:100%}
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      text-decoration: none;
+      flex: 1 1 auto
+    }
 
-/* Events timeline */
-.timeline{position:relative;padding-left:clamp(32px,7vw,46px)}
-.timeline::before{
-  content:"";position:absolute;left:clamp(11px,2.4vw,15px);top:6px;bottom:6px;width:3px;
-  background:repeating-linear-gradient(180deg,var(--marigold) 0 10px, transparent 10px 16px);
-  border-radius:3px;
-}
-.tl-item{position:relative;padding:0 0 clamp(22px,4vw,34px) clamp(14px,3vw,22px)}
-.tl-item:last-child{padding-bottom:0}
-.tl-dot{
-  position:absolute;
-  left:-45px;
-  top:0;
-  width:32px;
-  height:32px;
-  border-radius:50%;
-  background:var(--maroon);
-  border:3px solid var(--marigold);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--marigold-pale);
-}
+    .brand-logo {
+      width: 60px;
+      height: 60px;
+      flex: none;
+      transition: transform .3s ease
+    }
 
-@media (max-width:768px){
-  .tl-dot{
-    left:-37px;
-  }
-}
-.tl-card{
-  background:#fff;border-radius:14px;padding:clamp(14px,3vw,18px) clamp(16px,3vw,22px);box-shadow:var(--shadow);
-  transition:transform .25s ease, box-shadow .25s ease;
-}
-.tl-card:hover{transform:translateX(6px);box-shadow:0 14px 30px rgba(51,13,15,.16)}
-.tl-card .day{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--vermillion);font-weight:700}
-.tl-card h4{font-family:'Yatra One',cursive;font-weight:400;font-size:1.2rem;color:var(--maroon);margin-top:4px}
-.tl-card p{color:var(--ink-soft);font-size:.9rem;margin-top:6px}
+    .brand:hover .brand-logo {
+      transform: rotate(12deg) scale(1.06)
+    }
 
-/* Gallery */
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:16px}
-.frame{
-  border-radius:12px;overflow:hidden;background:#fff;padding:7px;
-  box-shadow:var(--shadow);border:1px solid var(--marigold-pale);
-  transition:transform .3s ease, box-shadow .3s ease;cursor:zoom-in;
-}
-.frame:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(51,13,15,.2)}
-.frame-img-wrap{border-radius:7px;overflow:hidden;aspect-ratio:1/1}
-.frame img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
-.frame:hover img{transform:scale(1.08)}
+    .brand span {
+      font-family: 'Yatra One', cursive;
+      font-size: 1.15rem;
+      color: var(--maroon);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
-.lightbox{
-  position:fixed;inset:0;z-index:200;background:rgba(20,6,7,.9);
-  display:flex;align-items:center;justify-content:center;padding:24px;
-  opacity:0;pointer-events:none;transition:opacity .25s ease;
-}
-.lightbox.open{opacity:1;pointer-events:auto}
-.lightbox img{max-width:min(90vw,780px);max-height:82vh;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
-.lightbox-close{
-  position:absolute;top:18px;right:18px;width:42px;height:42px;border-radius:50%;
-  background:rgba(251,243,226,.15);border:1px solid rgba(251,243,226,.4);color:var(--cream);
-  font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;
-}
-.lightbox-close:hover{background:rgba(251,243,226,.28)}
+    .navlinks {
+      display: flex;
+      gap: 2px;
+      align-items: center;
+      flex: none
+    }
 
-/* joinus */
-.hundi{
-  background:linear-gradient(160deg,var(--maroon) 0%, var(--maroon-deep) 100%);
-  color:var(--cream);border-radius:22px;padding:clamp(30px,6vw,46px);text-align:center;
-  box-shadow:var(--shadow);position:relative;overflow:hidden;max-width:520px;margin:auto;
-}
-.hundi::before{
-  content:"";position:absolute;inset:10px;border:1px solid rgba(242,169,0,.35);border-radius:14px;pointer-events:none;
-}
-.hundi h3{font-size:clamp(1.3rem,4vw,1.6rem);color:var(--marigold-pale)}
-.hundi p{color:#e9d7c3;margin-top:6px}
-.qr-box{
-  width:clamp(120px,30vw,150px);height:clamp(120px,30vw,150px);margin:22px auto 14px;background:#fff;border-radius:12px;
-  display:flex;align-items:center;justify-content:center;color:var(--ink-soft);
-  font-size:.8rem;border:3px solid var(--marigold);
-}
-.upi{
-  display:inline-block;margin-top:8px;padding:9px 18px;border-radius:999px;
-  background:rgba(242,169,0,.14);border:1px solid var(--marigold-pale);
-  font-family:monospace;letter-spacing:.03em;color:var(--marigold-pale);
-  word-break:break-all;max-width:100%;
-}
+    .navlinks a {
+      position: relative;
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-weight: 600;
+      font-size: .9rem;
+      padding: 9px 15px;
+      border-radius: 999px;
+      transition: .25s;
+      white-space: nowrap;
+    }
 
-/* Contact */
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:16px}
-.contact-card{
-  background:#fff;border-radius:14px;padding:22px;box-shadow:var(--shadow);
-  display:flex;gap:14px;align-items:flex-start;
-  transition:transform .25s ease, box-shadow .25s ease;
-}
-.contact-card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(51,13,15,.15)}
-.icon-badge{
-  flex:none;width:42px;height:42px;border-radius:50%;background:var(--vermillion);
-  display:flex;align-items:center;justify-content:center;color:#fff;
-}
-.icon-badge svg{width:20px;height:20px}
-.contact-card h4{font-size:.95rem;color:var(--maroon);margin-bottom:2px}
-.contact-card p{color:var(--ink-soft);font-size:.92rem;word-break:break-word}
-.contact-card a{color:var(--ink-soft);text-decoration:none}
-.contact-card a:hover{color:var(--vermillion)}
+    .navlinks a.active {
+      color: var(--maroon)
+    }
 
-/* Footer */
-footer{
-  background:var(--maroon-deep);color:var(--marigold-pale);text-align:center;
-  padding:clamp(40px,7vw,54px) 20px clamp(24px,4vw,34px);position:relative;
-}
-footer .footer-logo{width:200px;height:200px;border-radius:50%;margin-bottom:16px;}
-footer .fmark{font-family:'Yatra One',cursive;font-size:clamp(1.3rem,4vw,1.6rem);color:var(--cream)}
-footer .fsub{font-size:.85rem;color:#d8b98e;margin-top:6px}
-footer .fsocial{margin-top:20px;display:flex;gap:14px;justify-content:center}
-footer .fsocial a{
-  width:38px;height:38px;border-radius:50%;border:1px solid rgba(242,169,0,.4);
-  display:flex;align-items:center;justify-content:center;color:var(--marigold-pale);text-decoration:none;
-  transition:.2s;
-}
-footer .fsocial a:hover{background:var(--marigold);color:var(--maroon-deep);transform:translateY(-3px)}
-footer .fine{margin-top:26px;font-size:.75rem;color:#8a6a52}
+    .navlinks a.active::after {
+      content: "";
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      bottom: 3px;
+      height: 2px;
+      background: var(--marigold);
+      border-radius: 2px;
+    }
 
-/* Back to top */
-.to-top{
-  position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;
-  background:var(--vermillion);color:#fff;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 10px 24px rgba(193,68,14,.4);border:none;cursor:pointer;z-index:60;
-  opacity:0;pointer-events:none;transform:translateY(10px);transition:.3s ease;
-}
-.to-top.show{opacity:1;pointer-events:auto;transform:none}
-.to-top:hover{transform:translateY(-3px)}
+    .navlinks a:hover,
+    .navlinks a:focus-visible {
+      background: var(--maroon);
+      color: var(--cream);
+      outline: none
+    }
 
-@media (max-width:600px){
-  .timeline{padding-left:34px}
-  .qr-box{font-size:.72rem}
-}
-@media (max-width:380px){
-  .hero h1{font-size:2.1rem}
-  .hero-ctas .btn{flex:1 1 100%;max-width:none}
-  .brand span{font-size:1rem}
-  .stat-row{grid-template-columns:1fr}
-}
+    .navlinks a:hover::after {
+      display: none
+    }
 
-@media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto}
-  .reveal,.stagger>*{opacity:1;transform:none;transition:none}
-  .petal{display:none}
-  .hero h1,.hero h3,.muhurat,.hero-ctas{animation:none}
-  .flame{animation:none}
-  .frame:hover img, .about-art:hover img{transform:none}
-}
+    .nav-toggle {
+      display: none;
+      flex: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      border: 1px solid var(--marigold-pale);
+      background: #fff;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 110;
+    }
 
-footer{
-  background: var(--maroon-deep);
-  color: var(--marigold-pale);
-  padding: clamp(40px,7vw,54px) 20px;
-}
+    .nav-toggle span {
+      width: 20px;
+      height: 2px;
+      background: var(--maroon);
+      border-radius: 2px;
+      transition: .25s ease
+    }
 
-.footer-content{
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:50px;
-}
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg)
+    }
 
-/* Left Side */
-.footer-left{
-  flex:0.35;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0
+    }
 
-.footer-logo{
-  width:220px;
-  height:auto;
-  object-fit:contain;
-}
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg)
+    }
 
-/* Right Side */
-.footer-right{
-  flex:0.65;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
+    .nav-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(42, 12, 14, .45);
+      z-index: 90;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
+    }
 
-.fmark{
-  font-family:'Yatra One',cursive;
-  font-size:1.5rem;
-  color:var(--cream);
-  margin-bottom:10px;
-}
+    .nav-backdrop.show {
+      opacity: 1;
+      pointer-events: auto
+    }
 
-.fsub{
-  margin-top:8px;
-  color:#d8b98e;
-  line-height:1.6;
-  font-size:1rem;
-}
+    @media (max-width:880px) {
+      .nav-toggle {
+        display: flex
+      }
 
-/* Social Buttons */
-.fsocial{
-  margin-top:22px;
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
+      .navlinks {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        height: 100dvh;
+        width: min(78vw, 320px);
+        z-index: 100;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+        background: var(--cream);
+        padding: calc(var(--nav-h) + 20px) 20px 30px;
+        transition: right .3s ease;
+        box-shadow: -14px 0 30px rgba(51, 13, 15, .18);
+        overflow-y: auto;
+      }
 
-.fsocial a{
-  padding:10px 18px;
-  border:1px solid rgba(242,169,0,.4);
-  border-radius:999px;
-  color:var(--marigold-pale);
-  text-decoration:none;
-  transition:all .3s ease;
-}
+      .navlinks.open {
+        right: 0;
+      }
 
-.fsocial a:hover{
-  background:var(--marigold);
-  color:var(--maroon-deep);
-  transform:translateY(-2px);
-}
+      .navlinks a {
+        padding: 16px 14px;
+        font-size: 1.05rem;
+        border-radius: 12px;
+        border-bottom: 1px solid var(--cream-2);
+      }
 
-.fine{
-  margin-top:24px;
-  font-size:.85rem;
-  color:#b99673;
-  border-top:1px solid rgba(255,255,255,.1);
-  padding-top:15px;
-}
+      .navlinks a.active::after {
+        display: none
+      }
 
-/* Mobile */
-@media(max-width:768px){
+      .navlinks a.active {
+        background: var(--cream-2)
+      }
+    }
 
-  .footer-content{
-    flex-direction:column;
-    text-align:center;
-    gap:25px;
-  }
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--cream);
+      padding: calc(var(--nav-h) + 40px) 20px 90px;
+      isolation: isolate;
+    }
 
-  .footer-left,
-  .footer-right{
-    flex:1;
-  }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: url('assets/hero-idol.jpg') center 22%/cover no-repeat;
+    }
 
-  .footer-right{
-    align-items:center;
-  }
+    .hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 0%,
+          rgba(212, 160, 70, 0.12) 0%,
+          rgba(212, 160, 70, 0) 45%),
+        linear-gradient(180deg,
+          #5A2024 0%,
+          #421519 35%,
+          #2F0F12 70%,
+          #2A0C0E 100%);
+    }
 
-  .fsocial{
-    justify-content:center;
-  }
+    .petals {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: -1;
+      pointer-events: none
+    }
 
-  .footer-logo{
-    width:140px;
-  }
+    .petal {
+      position: absolute;
+      top: -8%;
+      width: 10px;
+      height: 10px;
+      border-radius: 50% 0;
+      background: var(--marigold);
+      opacity: .75;
+      animation: fall linear infinite;
+    }
 
-  .fine{
-    width:100%;
-  }
-}
-.qr-box{
-    width:160px;
-    height:160px;
-    margin:20px auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#fff;
-    border:3px solid #d49a00;
-    border-radius:16px;   /* rounded shape */
-    overflow:hidden;      /* keeps image inside rounded corners */
-    text-decoration:none;
-    transition:.3s ease;
-}
+    @keyframes fall {
+      0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0
+      }
 
-.qr-box:hover{
-    transform:scale(1.05);
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
-}
+      10% {
+        opacity: .85
+      }
 
-.qr-box img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-}
-</style>
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+      90% {
+        opacity: .7
+      }
+
+      100% {
+        transform: translateY(112vh) translateX(var(--drift, 30px)) rotate(300deg);
+        opacity: 0
+      }
+    }
+
+    .garland {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 30px;
+      z-index: 1;
+      background-image: radial-gradient(circle, var(--marigold) 0 5px, transparent 6px);
+      background-size: 30px 30px;
+      background-position: center 6px;
+      opacity: .9;
+    }
+
+    .hero-arch {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      width: 100%;
+      height: clamp(40px, 8vw, 90px);
+      z-index: 1
+    }
+
+    .hero-arch svg {
+      width: 100%;
+      height: 100%;
+      display: block
+    }
+
+    .hero .kicker {
+      font-weight: 700;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      font-size: clamp(.66rem, 2vw, .78rem);
+      color: var(--marigold-pale);
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 8vw, 4.6rem);
+      text-shadow: 0 4px 24px rgba(0, 0, 0, .4);
+      animation: riseIn .9s ease both;
+    }
+
+    .hero h3 {
+      font-weight: 500;
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      color: var(--marigold-pale);
+      margin-top: 10px;
+      animation: riseIn .9s ease .1s both;
+    }
+
+    @keyframes riseIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    .muhurat {
+      margin-top: clamp(24px, 5vw, 34px);
+      border: 1px solid rgba(242, 169, 0, .5);
+      background: rgba(42, 12, 14, .5);
+      padding: 16px 24px;
+      border-radius: 16px;
+      backdrop-filter: blur(4px);
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      animation: riseIn .9s ease .2s both;
+    }
+
+    .flame {
+      width: 20px;
+      height: 26px;
+      flex: none;
+      animation: flicker 1.6s ease-in-out infinite
+    }
+
+    @keyframes flicker {
+
+      0%,
+      100% {
+        transform: scale(1) rotate(0deg)
+      }
+
+      25% {
+        transform: scale(1.05, .95) rotate(-2deg)
+      }
+
+      50% {
+        transform: scale(.95, 1.05) rotate(2deg)
+      }
+
+      75% {
+        transform: scale(1.03, .97) rotate(-1deg)
+      }
+    }
+
+    .muhurat-text {
+      text-align: left
+    }
+
+    .muhurat .label {
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--marigold-pale);
+      font-weight: 700
+    }
+
+    #countdown {
+      font-family: 'Yatra One', cursive;
+      font-size: clamp(1.25rem, 5vw, 1.8rem);
+      margin-top: 4px;
+      color: var(--marigold);
+      text-shadow: 0 0 18px rgba(242, 169, 0, .45);
+    }
+
+    .hero-ctas {
+      margin-top: 30px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: 420px;
+      animation: riseIn .9s ease .3s both;
+    }
+
+    .btn {
+      background: var(--vermillion);
+      padding: 13px 24px;
+      border-radius: 999px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: .9rem;
+      letter-spacing: .02em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 8px 20px rgba(193, 68, 14, .35);
+      transition: transform .2s ease, box-shadow .2s ease;
+      flex: 1 1 150px;
+      max-width: 220px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, .25);
+      transform: translateX(-110%) skewX(-15deg);
+      transition: transform .5s ease;
+    }
+
+    .btn:hover::before {
+      transform: translateX(110%) skewX(-15deg)
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(193, 68, 14, .45)
+    }
+
+    .btn.ghost {
+      background: transparent;
+      border: 1.5px solid var(--marigold-pale);
+      box-shadow: none
+    }
+
+    .btn.ghost:hover {
+      background: rgba(242, 169, 0, .14)
+    }
+
+    .scroll-cue {
+      position: absolute;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      width: 24px;
+      height: 38px;
+      border: 2px solid rgba(251, 243, 226, .55);
+      border-radius: 14px;
+    }
+
+    .scroll-cue::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 50%;
+      width: 4px;
+      height: 8px;
+      margin-left: -2px;
+      background: var(--marigold-pale);
+      border-radius: 2px;
+      animation: scrollcue 1.6s ease infinite;
+    }
+
+    @keyframes scrollcue {
+      0% {
+        opacity: 1;
+        top: 6px
+      }
+
+      70% {
+        opacity: 0;
+        top: 20px
+      }
+
+      100% {
+        opacity: 0;
+        top: 6px
+      }
+    }
+
+    /* ---------- Sections ---------- */
+    section {
+      padding: clamp(56px, 9vw, 96px) 0 clamp(46px, 7vw, 72px)
+    }
+
+    .section-inner {
+      width: 100%;
+      max-width: 1080px;
+      margin: auto;
+      padding-inline: clamp(16px, 4vw, 28px)
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--maroon);
+      font-size: clamp(1.75rem, 5vw, 2.6rem);
+      margin-bottom: 8px
+    }
+
+    .section-sub {
+      text-align: center;
+      color: var(--ink-soft);
+      max-width: 560px;
+      margin: 0 auto clamp(30px, 5vw, 44px);
+      font-size: 1rem
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .7s cubic-bezier(.2, .7, .2, 1), transform .7s cubic-bezier(.2, .7, .2, 1)
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none
+    }
+
+    .stagger.in>* {
+      opacity: 1;
+      transform: none
+    }
+
+    .stagger>* {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .6s ease, transform .6s ease
+    }
+
+    .stagger.in>*:nth-child(1) {
+      transition-delay: .05s
+    }
+
+    .stagger.in>*:nth-child(2) {
+      transition-delay: .13s
+    }
+
+    .stagger.in>*:nth-child(3) {
+      transition-delay: .21s
+    }
+
+    .stagger.in>*:nth-child(4) {
+      transition-delay: .29s
+    }
+
+    .stagger.in>*:nth-child(5) {
+      transition-delay: .37s
+    }
+
+    .stagger.in>*:nth-child(6) {
+      transition-delay: .45s
+    }
+
+    .divider {
+      width: 100%;
+      height: clamp(28px, 5vw, 50px);
+      display: block;
+      line-height: 0
+    }
+
+    .divider svg {
+      width: 100%;
+      height: 100%;
+      display: block
+    }
+
+    /* About */
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: clamp(24px, 4vw, 44px);
+      align-items: center
+    }
+
+    .about-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: clamp(24px, 4vw, 36px);
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--marigold);
+    }
+
+    .about-card h3 {
+      color: var(--maroon);
+      font-size: 1.35rem
+    }
+
+    .about-card p {
+      color: var(--ink-soft);
+      margin-top: 14px
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 26px
+    }
+
+    .stat {
+      background: var(--cream-2);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center
+    }
+
+    .stat b {
+      display: block;
+      font-family: 'Yatra One', cursive;
+      font-size: clamp(1.4rem, 4vw, 1.7rem);
+      color: var(--vermillion)
+    }
+
+    .stat span {
+      font-size: .75rem;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: .08em
+    }
+
+    .about-art {
+      aspect-ratio: 4/5;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 6px solid #fff;
+      outline: 2px solid var(--marigold-pale);
+      position: relative;
+    }
+
+    .about-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 90%;
+      transition: transform .6s ease
+    }
+
+    .about-art:hover img {
+      transform: scale(1.06)
+    }
+
+    @media (max-width:860px) {
+      .about-wrap {
+        grid-template-columns: 1fr
+      }
+
+      .about-art {
+        order: -1;
+        aspect-ratio: 16/10;
+        max-width: 480px;
+        margin-inline: auto;
+        width: 100%
+      }
+    }
+
+    /* Events timeline */
+    .timeline {
+      position: relative;
+      padding-left: clamp(32px, 7vw, 46px)
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: clamp(11px, 2.4vw, 15px);
+      top: 6px;
+      bottom: 6px;
+      width: 3px;
+      background: repeating-linear-gradient(180deg, var(--marigold) 0 10px, transparent 10px 16px);
+      border-radius: 3px;
+    }
+
+    .tl-item {
+      position: relative;
+      padding: 0 0 clamp(22px, 4vw, 34px) clamp(14px, 3vw, 22px)
+    }
+
+    .tl-item:last-child {
+      padding-bottom: 0
+    }
+
+    .tl-dot {
+      position: absolute;
+      left: -45px;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--maroon);
+      border: 3px solid var(--marigold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--marigold-pale);
+    }
+
+    @media (max-width:768px) {
+      .tl-dot {
+        left: -37px;
+      }
+    }
+
+    .tl-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: clamp(14px, 3vw, 18px) clamp(16px, 3vw, 22px);
+      box-shadow: var(--shadow);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .tl-card:hover {
+      transform: translateX(6px);
+      box-shadow: 0 14px 30px rgba(51, 13, 15, .16)
+    }
+
+    .tl-card .day {
+      font-size: .7rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--vermillion);
+      font-weight: 700
+    }
+
+    .tl-card h4 {
+      font-family: 'Yatra One', cursive;
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: var(--maroon);
+      margin-top: 4px
+    }
+
+    .tl-card p {
+      color: var(--ink-soft);
+      font-size: .9rem;
+      margin-top: 6px
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+      gap: 16px
+    }
+
+    .frame {
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      padding: 7px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--marigold-pale);
+      transition: transform .3s ease, box-shadow .3s ease;
+      cursor: zoom-in;
+    }
+
+    .frame:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 34px rgba(51, 13, 15, .2)
+    }
+
+    .frame-img-wrap {
+      border-radius: 7px;
+      overflow: hidden;
+      aspect-ratio: 1/1
+    }
+
+    .frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s ease
+    }
+
+    .frame:hover img {
+      transform: scale(1.08)
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(20, 6, 7, .9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
+    }
+
+    .lightbox.open {
+      opacity: 1;
+      pointer-events: auto
+    }
+
+    .lightbox img {
+      max-width: min(90vw, 780px);
+      max-height: 82vh;
+      border-radius: 10px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .5)
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(251, 243, 226, .15);
+      border: 1px solid rgba(251, 243, 226, .4);
+      color: var(--cream);
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(251, 243, 226, .28)
+    }
+
+    /* joinus */
+    .hundi {
+      background: linear-gradient(160deg, var(--maroon) 0%, var(--maroon-deep) 100%);
+      color: var(--cream);
+      border-radius: 22px;
+      padding: clamp(30px, 6vw, 46px);
+      text-align: center;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      max-width: 520px;
+      margin: auto;
+    }
+
+    .hundi::before {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border: 1px solid rgba(242, 169, 0, .35);
+      border-radius: 14px;
+      pointer-events: none;
+    }
+
+    .hundi h3 {
+      font-size: clamp(1.3rem, 4vw, 1.6rem);
+      color: var(--marigold-pale)
+    }
+
+    .hundi p {
+      color: #e9d7c3;
+      margin-top: 6px
+    }
+
+    .qr-box {
+      width: clamp(120px, 30vw, 150px);
+      height: clamp(120px, 30vw, 150px);
+      margin: 22px auto 14px;
+      background: #fff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-soft);
+      font-size: .8rem;
+      border: 3px solid var(--marigold);
+    }
+
+    .upi {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 9px 18px;
+      border-radius: 999px;
+      background: rgba(242, 169, 0, .14);
+      border: 1px solid var(--marigold-pale);
+      font-family: monospace;
+      letter-spacing: .03em;
+      color: var(--marigold-pale);
+      word-break: break-all;
+      max-width: 100%;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+      gap: 16px
+    }
+
+    .contact-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(51, 13, 15, .15)
+    }
+
+    .icon-badge {
+      flex: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--vermillion);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .icon-badge svg {
+      width: 20px;
+      height: 20px
+    }
+
+    .contact-card h4 {
+      font-size: .95rem;
+      color: var(--maroon);
+      margin-bottom: 2px
+    }
+
+    .contact-card p {
+      color: var(--ink-soft);
+      font-size: .92rem;
+      word-break: break-word
+    }
+
+    .contact-card a {
+      color: var(--ink-soft);
+      text-decoration: none
+    }
+
+    .contact-card a:hover {
+      color: var(--vermillion)
+    }
+
+    /* Footer */
+    footer {
+      background: var(--maroon-deep);
+      color: var(--marigold-pale);
+      text-align: center;
+      padding: clamp(40px, 7vw, 54px) 20px clamp(24px, 4vw, 34px);
+      position: relative;
+    }
+
+    footer .footer-logo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+    }
+
+    footer .fmark {
+      font-family: 'Yatra One', cursive;
+      font-size: clamp(1.3rem, 4vw, 1.6rem);
+      color: var(--cream)
+    }
+
+    footer .fsub {
+      font-size: .85rem;
+      color: #d8b98e;
+      margin-top: 6px
+    }
+
+    footer .fsocial {
+      margin-top: 20px;
+      display: flex;
+      gap: 14px;
+      justify-content: center
+    }
+
+    footer .fsocial a {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(242, 169, 0, .4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--marigold-pale);
+      text-decoration: none;
+      transition: .2s;
+    }
+
+    footer .fsocial a:hover {
+      background: var(--marigold);
+      color: var(--maroon-deep);
+      transform: translateY(-3px)
+    }
+
+    footer .fine {
+      margin-top: 26px;
+      font-size: .75rem;
+      color: #8a6a52
+    }
+
+    /* Back to top */
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--vermillion);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 24px rgba(193, 68, 14, .4);
+      border: none;
+      cursor: pointer;
+      z-index: 60;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: .3s ease;
+    }
+
+    .to-top.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: none
+    }
+
+    .to-top:hover {
+      transform: translateY(-3px)
+    }
+
+    @media (max-width:600px) {
+      .timeline {
+        padding-left: 34px
+      }
+
+      .qr-box {
+        font-size: .72rem
+      }
+    }
+
+    @media (max-width:380px) {
+      .hero h1 {
+        font-size: 2.1rem
+      }
+
+      .hero-ctas .btn {
+        flex: 1 1 100%;
+        max-width: none
+      }
+
+      .brand span {
+        font-size: 1rem
+      }
+
+      .stat-row {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      .reveal,
+      .stagger>* {
+        opacity: 1;
+        transform: none;
+        transition: none
+      }
+
+      .petal {
+        display: none
+      }
+
+      .hero h1,
+      .hero h3,
+      .muhurat,
+      .hero-ctas {
+        animation: none
+      }
+
+      .flame {
+        animation: none
+      }
+
+      .frame:hover img,
+      .about-art:hover img {
+        transform: none
+      }
+    }
+
+    footer {
+      background: var(--maroon-deep);
+      color: var(--marigold-pale);
+      padding: clamp(40px, 7vw, 54px) 20px;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+    }
+
+    /* Left Side */
+    .footer-left {
+      flex: 0.35;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-logo {
+      width: 220px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Right Side */
+    .footer-right {
+      flex: 0.65;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .fmark {
+      font-family: 'Yatra One', cursive;
+      font-size: 1.5rem;
+      color: var(--cream);
+      margin-bottom: 10px;
+    }
+
+    .fsub {
+      margin-top: 8px;
+      color: #d8b98e;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    /* Social Buttons */
+    .fsocial {
+      margin-top: 22px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .fsocial a {
+      padding: 10px 18px;
+      border: 1px solid rgba(242, 169, 0, .4);
+      border-radius: 999px;
+      color: var(--marigold-pale);
+      text-decoration: none;
+      transition: all .3s ease;
+    }
+
+    .fsocial a:hover {
+      background: var(--marigold);
+      color: var(--maroon-deep);
+      transform: translateY(-2px);
+    }
+
+    .fine {
+      margin-top: 24px;
+      font-size: .85rem;
+      color: #b99673;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      padding-top: 15px;
+    }
+
+    /* Mobile */
+    @media(max-width:768px) {
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+      }
+
+      .footer-left,
+      .footer-right {
+        flex: 1;
+      }
+
+      .footer-right {
+        align-items: center;
+      }
+
+      .fsocial {
+        justify-content: center;
+      }
+
+      .footer-logo {
+        width: 140px;
+      }
+
+      .fine {
+        width: 100%;
+      }
+    }
+
+    .qr-box {
+      width: 160px;
+      height: 160px;
+      margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border: 3px solid #d49a00;
+      border-radius: 16px;
+      /* rounded shape */
+      overflow: hidden;
+      /* keeps image inside rounded corners */
+      text-decoration: none;
+      transition: .3s ease;
+    }
+
+    .qr-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+    }
+
+    .qr-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
-<div class="progress" id="progress"></div>
+  <div class="progress" id="progress"></div>
 
-<nav id="mainNav">
-  <div class="wrap">
-    <a href="#top" class="brand" aria-label="Harivilla Cha Raja home">
-      <img src="New Logo BG.png" alt="Harivilla Cha Raja emblem" class="brand-logo">
-      <span>Harivilla Cha Raja</span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="navlinks" id="navLinks">
-      <a href="#about" data-nav>About</a>
-      <a href="#events" data-nav>Events</a>
-      <a href="#gallery" data-nav>Gallery</a>
-      <a href="#joinus" data-nav>Join Us</a>
-      <a href="#contact" data-nav>Contact</a>
+  <nav id="mainNav">
+    <div class="wrap">
+      <a href="#top" class="brand" aria-label="Harivilla Cha Raja home">
+        <img src="New Logo BG.png" alt="Harivilla Cha Raja emblem" class="brand-logo">
+        <span>Harivilla Cha Raja</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navlinks" id="navLinks">
+        <a href="#about" data-nav>About</a>
+        <!-- <a href="#events" data-nav>Events</a> -->
+        <a href="#gallery" data-nav>Gallery</a>
+        <a href="#joinus" data-nav>Join Us</a>
+        <a href="#contact" data-nav>Contact</a>
+      </div>
     </div>
-  </div> 
-</nav>
-<div class="nav-backdrop" id="navBackdrop"></div>
+  </nav>
+  <div class="nav-backdrop" id="navBackdrop"></div>
 
-<section class="hero" id="top">
-  <div class="hero-bg"></div>
-  <div class="petals" id="petals"></div>
-  <div class="garland"></div>
+  <section class="hero" id="top">
+    <div class="hero-bg"></div>
+    <div class="petals" id="petals"></div>
+    <div class="garland"></div>
 
-  <div class="kicker">Ganesh Chaturthi · Ahmedabad</div>
-  <div class="kicker">Organized by Shree Harihareshwar Mahadev Mitra Mandal</div>
-  <h1>Harivilla Cha Raja</h1>
-  <h3>Ganpati Bappa Morya 🙏</h3>
+    <div class="kicker">Ganesh Chaturthi · Ahmedabad</div>
+    <div class="kicker">Organized by Shree Harihareshwar Mahadev Mitra Mandal</div>
+    <h1>Harivilla Cha Raja</h1>
+    <h3>Ganpati Bappa Morya 🙏</h3>
 
-  <div class="muhurat">
-    <svg class="flame" viewBox="0 0 24 32" fill="none"><path d="M12 2c-2.2 4-6 7-6 12.5C6 20.8 8.7 25 12 25s6-4.2 6-10.5C18 9 14.2 6 12 2Z" fill="#F2A900"/><path d="M12 12c-1 2-2.6 3.5-2.6 6.2 0 2.6 1.6 4.3 2.6 4.3s2.6-1.7 2.6-4.3c0-2.7-1.6-4.2-2.6-6.2Z" fill="#FBD473"/></svg>
-    <div class="muhurat-text">
-      <div class="label">Bappa Arrives In</div>
-      <div id="countdown">Loading…</div>
+    <div class="muhurat">
+      <svg class="flame" viewBox="0 0 24 32" fill="none">
+        <path d="M12 2c-2.2 4-6 7-6 12.5C6 20.8 8.7 25 12 25s6-4.2 6-10.5C18 9 14.2 6 12 2Z" fill="#F2A900" />
+        <path d="M12 12c-1 2-2.6 3.5-2.6 6.2 0 2.6 1.6 4.3 2.6 4.3s2.6-1.7 2.6-4.3c0-2.7-1.6-4.2-2.6-6.2Z"
+          fill="#FBD473" />
+      </svg>
+      <div class="muhurat-text">
+        <!-- <div class="label">Bappa Arrives In</div> -->
+        <div id="countdown">Loading…</div>
+      </div>
     </div>
-  </div>
 
-  <div class="hero-ctas">
-    <a class="btn" href="#gallery">View Gallery</a>
-    <a class="btn ghost" href="#contact">Contact Us</a>
-  </div>
+    <div class="hero-ctas">
+      <a class="btn" href="#gallery">View Gallery</a>
+      <a class="btn ghost" href="#contact">Contact Us</a>
+    </div>
 
-  <div class="hero-arch">
-    <svg viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0,80 L0,40 Q150,0 300,40 T600,40 T900,40 T1200,40 L1200,80 Z" fill="#FBF3E2"/></svg>
-  </div>
-  <div class="scroll-cue" aria-hidden="true"></div>
-</section>
+    <div class="hero-arch">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 L0,40 Q150,0 300,40 T600,40 T900,40 T1200,40 L1200,80 Z" fill="#FBF3E2" />
+      </svg>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"></div>
+  </section>
 
-<section id="about" class="reveal">
-  <div class="section-inner">
-    <div class="eyebrow">Our Story</div>
-    <h2>About the Mandal</h2>
-    <p class="section-sub">A community built on devotion, culture and seva — for the neighbourhood, by the neighbourhood.</p>
+  <section id="about" class="reveal">
+    <div class="section-inner">
+      <div class="eyebrow">Our Story</div>
+      <h2>About the Mandal</h2>
+      <p class="section-sub">A community built on devotion, culture and seva — for the neighbourhood, by the
+        neighbourhood.</p>
 
-    <div class="about-wrap">
-    <div class="about-card">
-        <h3>Celebrating Faith Since 2001 🙏</h3>
+      <div class="about-wrap">
+        <div class="about-card">
+          <h3>Celebrating Faith Since 2001 🙏</h3>
 
-        <p>
+          <p>
             <strong>Harivilla Cha Raja</strong> has been a symbol of devotion,
             unity, and tradition since <strong>2001</strong>, bringing families
             and devotees together to celebrate the blessings of Lord Ganesha.
-        </p>
+          </p>
 
-        <p>
+          <p>
             Since <strong>2023</strong>, the festival has been proudly organized by
             <strong>Shree Harihareshwar Mahadev Mitra Mandal</strong>, continuing this cherished
             legacy through cultural programs, community service, and grand Ganesh
             Utsav celebrations.
-        </p>
+          </p>
 
-        <div class="stat-row">
+          <div class="stat-row">
             <div class="stat">
-                <b class="counter" data-target="25">0</b>
-                <span>Years of Tradition</span>
+              <b class="counter" data-target="25">0</b>
+              <span>Years of Tradition</span>
             </div>
 
             <div class="stat">
-                <b class="counter" data-target="500" data-suffix="+">0</b>
-                <span>Families Connected</span>
+              <b class="counter" data-target="500" data-suffix="+">0</b>
+              <span>Families Connected</span>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="about-art">
-        <img src="About us Image.jpg"
-             alt="Harivilla Cha Raja Ganesh Idol"
-             loading="lazy">
-    </div>
-</div>
-  </div>
-</section>
-
-<section id="events" class="reveal">
-  <div class="section-inner">
-    <div class="eyebrow">Utsav Schedule</div>
-    <h2>Event Timeline</h2>
-    <p class="section-sub">Ten days of celebration, from Murti Sthapana to Visarjan Yatra.</p>
-
-    <div class="timeline stagger">
-      <div class="tl-item">
-        <div class="tl-dot">1</div>
-        <div class="tl-card"><div class="day">Day 1</div><h4>Murti Sthapana</h4><p>Ganeshji's arrival and installation with vedic rituals.</p></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot">2</div>
-        <div class="tl-card"><div class="day">Day 2</div><h4>Cultural Night</h4><p>Performances by the community — dance, drama and music.</p></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot">3</div>
-        <div class="tl-card"><div class="day">Day 3</div><h4>Bhajan Sandhya</h4><p>An evening of devotional bhajans and kirtan.</p></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot">4</div>
-        <div class="tl-card"><div class="day">Day 4</div><h4>Maha Aarti</h4><p>Grand aarti open to all devotees and families.</p></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot">5</div>
-        <div class="tl-card"><div class="day">Day 5</div><h4>Mahaprasad</h4><p>Community meal — everyone is welcome to join.</p></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot">10</div>
-        <div class="tl-card"><div class="day">Day 10</div><h4>Visarjan Yatra</h4><p>A joyous procession bidding farewell to Bappa.</p></div>
+        <div class="about-art">
+          <img src="Gallery/IMG_7127.jpg" alt="Harivilla Cha Raja Ganesh Idol" loading="lazy">
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="gallery" class="reveal">
-  <div class="section-inner">
-    <div class="eyebrow">Moments</div>
-    <h2>Gallery</h2>
-    <p class="section-sub">Glimpses from past celebrations. Tap a photo to enlarge.</p>
-    <div class="gallery stagger">
+  <!-- <section id="events" class="reveal">
+    <div class="section-inner">
+      <div class="eyebrow">Utsav Schedule</div>
+      <h2>Event Timeline</h2>
+      <p class="section-sub">Ten days of celebration, from Murti Sthapana to Visarjan Yatra.</p>
 
-  <div class="frame" data-lightbox>
-    <div class="frame-img-wrap">
-      <img src="Gallery/IMG_1.jpg" alt="Gallery Image 1" loading="lazy">
-    </div>
-  </div>
-
-  <div class="frame" data-lightbox>
-    <div class="frame-img-wrap">
-      <img src="Gallery/IMG_2.jpg" alt="Gallery Image 2" loading="lazy">
-    </div>
-  </div>
-
-  <div class="frame" data-lightbox>
-    <div class="frame-img-wrap">
-      <img src="Gallery/IMG_3.jpg" alt="Gallery Image 3" loading="lazy">
-    </div>
-  </div>
-
-  <div class="frame" data-lightbox>
-    <div class="frame-img-wrap">
-      <img src="Gallery/IMG_4.jpg" alt="Gallery Image 4" loading="lazy">
-    </div>
-  </div>
-
-  <div class="frame" data-lightbox>
-    <div class="frame-img-wrap">
-      <img src="Gallery/IMG.jpeg" alt="Gallery Image 5" loading="lazy">
-    </div>
-  </div>
-
-  <div class="frame" data-lightbox>
-    <div class="frame-img-wrap">
-      <img src="Gallery/IMG_06.jpeg" alt="Gallery Image 6" loading="lazy">
-    </div>
-  </div>
-
-  <div class="frame" data-lightbox>
-    <div class="frame-img-wrap">
-      <img src="Gallery/IMG_7.jpeg" alt="Gallery Image 7" loading="lazy">
-    </div>
-  </div>
-
-  <div class="frame" data-lightbox>
-    <div class="frame-img-wrap">
-      <img src="Gallery/IMG_8.jpeg" alt="Gallery Image 8" loading="lazy">
-    </div>
-  </div>
-
-</div>
-
-<div style="text-align:center;margin-top:35px;">
-    <a href="https://drive.google.com/drive/folders/1evUTEi9lWB9yZRjzuvSOEeoeBK69OZNP" class="btn">
-        View Full Gallery →
-    </a>
-</div>
-  </div>
-</section>
-
-<section id="joinus" class="reveal">
-  <div class="section-inner">
-    <div class="eyebrow">Join Our Community </div>
-    <h2>Support the Mandal</h2>
-    <p class="section-sub">
-  Be a part of our growing family and help us make this celebration memorable.
-</p>
-    <div class="hundi">
-    <h3>Support Harivilla Cha Raja</h3>
-    <p>Scan to join community</p>
-
-    <a href="https://www.instagram.com/harivilla_cha_raja?igsh=dnZhcnN0OGx1Yzht"
-       target="_blank"
-       class="qr-box">
-        <img src="Gallery/QR FOLLOW.png"
-             alt="Follow on Instagram"
-             loading="lazy">
-    </a>
-</div>
-  </div>
-</section>
-
-<section id="contact" class="reveal">
-  <div class="section-inner">
-    <div class="eyebrow">Reach Us</div>
-    <h2>Contact</h2>
-    <div class="contact-grid stagger">
-      <div class="contact-card">
-        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-7.4 7-12a7 7 0 1 0-14 0c0 4.6 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
-        <div><h4>Location</h4><p>Ahmedabad, Gujarat</p></div>
-      </div>
-      <div class="contact-card">
-        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg></div>
-        <div><h4>Phone</h4><p><a href="tel:+916353901020">+91 63539 01020</a></p></div>
-      </div>
-      <div class="contact-card">
-        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg></div>
-        <div><h4>Email</h4><p><a href="mailto:harivillacharaja@gmail.com">harivillacharaja@gmail.com</a></p></div>
-      </div>
-      <div class="contact-card">
-        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.3" cy="6.7" r="1"/></svg></div>
-        <div><h4>Follow</h4><p><a href="https://www.instagram.com/harivilla_cha_raja?igsh=dnZhcnN0OGx1Yzht">Instagram</a> · <a href="https://www.facebook.com/share/1akLMdp8GP/?mibextid=wwXIfr">Facebook</a> · <a href="https://www.youtube.com/@HarivillaChaRaja">YouTube</a></p></div>
+      <div class="timeline stagger">
+        <div class="tl-item">
+          <div class="tl-dot">1</div>
+          <div class="tl-card">
+            <div class="day">Day 1</div>
+            <h4>Murti Sthapana</h4>
+            <p>Ganeshji's arrival and installation with vedic rituals.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">2</div>
+          <div class="tl-card">
+            <div class="day">Day 2</div>
+            <h4>Cultural Night</h4>
+            <p>Performances by the community — dance, drama and music.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">3</div>
+          <div class="tl-card">
+            <div class="day">Day 3</div>
+            <h4>Bhajan Sandhya</h4>
+            <p>An evening of devotional bhajans and kirtan.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">4</div>
+          <div class="tl-card">
+            <div class="day">Day 4</div>
+            <h4>Maha Aarti</h4>
+            <p>Grand aarti open to all devotees and families.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">5</div>
+          <div class="tl-card">
+            <div class="day">Day 5</div>
+            <h4>Mahaprasad</h4>
+            <p>Community meal — everyone is welcome to join.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">10</div>
+          <div class="tl-card">
+            <div class="day">Day 10</div>
+            <h4>Visarjan Yatra</h4>
+            <p>A joyous procession bidding farewell to Bappa.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section> -->
 
-<footer>
+  <section id="gallery" class="reveal">
+    <div class="section-inner">
+      <div class="eyebrow">Moments</div>
+      <h2>Gallery</h2>
+      <p class="section-sub">Glimpses from past celebrations. Tap a photo to enlarge.</p>
+      <div class="gallery stagger">
 
-  <div class="footer-content">
+        <div class="frame" data-lightbox>
+          <div class="frame-img-wrap">
+            <img src="Gallery/IMG_7127.jpg" alt="Gallery Image 1" loading="lazy">
+          </div>
+        </div>
 
-    <!-- Logo Section -->
-    <div class="footer-left">
-      <img src="New Logo BG.png" alt="Harivilla Cha Raja Logo" class="footer-logo">
+        <div class="frame" data-lightbox>
+          <div class="frame-img-wrap">
+            <img src="Gallery/IMG_2.jpg" alt="Gallery Image 2" loading="lazy">
+          </div>
+        </div>
+
+        <div class="frame" data-lightbox>
+          <div class="frame-img-wrap">
+            <img src="Gallery/IMG_3.jpg" alt="Gallery Image 3" loading="lazy">
+          </div>
+        </div>
+
+        <div class="frame" data-lightbox>
+          <div class="frame-img-wrap">
+            <img src="Gallery/IMG_4.jpg" alt="Gallery Image 4" loading="lazy">
+          </div>
+        </div>
+
+        <div class="frame" data-lightbox>
+          <div class="frame-img-wrap">
+            <img src="Gallery/IMG.jpeg" alt="Gallery Image 5" loading="lazy">
+          </div>
+        </div>
+
+        <div class="frame" data-lightbox>
+          <div class="frame-img-wrap">
+            <img src="Gallery/IMG_06.jpeg" alt="Gallery Image 6" loading="lazy">
+          </div>
+        </div>
+
+        <div class="frame" data-lightbox>
+          <div class="frame-img-wrap">
+            <img src="Gallery/IMG_7.jpeg" alt="Gallery Image 7" loading="lazy">
+          </div>
+        </div>
+
+        <div class="frame" data-lightbox>
+          <div class="frame-img-wrap">
+            <img src="Gallery/IMG_8.jpeg" alt="Gallery Image 8" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:35px;">
+        <a href="https://drive.google.com/drive/folders/1evUTEi9lWB9yZRjzuvSOEeoeBK69OZNP" class="btn">
+          View Full Gallery →
+        </a>
+      </div>
     </div>
+  </section>
 
-    <!-- Information Section -->
-    <div class="footer-right">
+  <section id="joinus" class="reveal">
+    <div class="section-inner">
+      <div class="eyebrow">Join Our Community </div>
+      <h2>Support the Mandal</h2>
+      <p class="section-sub">
+        Be a part of our growing family and help us make this celebration memorable.
+      </p>
+      <div class="hundi">
+        <h3>Support Harivilla Cha Raja</h3>
+        <p>Scan to join community</p>
 
-      <h3 class="fmark">Ganpati Bappa Morya 🙏</h3>
+        <a href="https://www.instagram.com/harivilla_cha_raja?igsh=dnZhcnN0OGx1Yzht" target="_blank" class="qr-box">
+          <img src="Gallery/QR FOLLOW.png" alt="Follow on Instagram" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </section>
 
-      <div class="fsub">📍 Ahmedabad, Gujarat</div>
+  <section id="contact" class="reveal">
+    <div class="section-inner">
+      <div class="eyebrow">Reach Us</div>
+      <h2>Contact</h2>
+      <div class="contact-grid stagger">
+        <div class="contact-card">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s7-7.4 7-12a7 7 0 1 0-14 0c0 4.6 7 12 7 12Z" />
+              <circle cx="12" cy="10" r="2.5" />
+            </svg></div>
+          <div>
+            <h4>Location</h4>
+            <p>Ahmedabad, Gujarat</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z" />
+            </svg></div>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:+916353901020">+91 63539 01020</a></p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16v16H4z" />
+              <path d="m4 6 8 7 8-7" />
+            </svg></div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:harivillacharaja@gmail.com">harivillacharaja@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="4" />
+              <circle cx="12" cy="12" r="3.5" />
+              <circle cx="17.3" cy="6.7" r="1" />
+            </svg></div>
+          <div>
+            <h4>Follow</h4>
+            <p><a href="https://www.instagram.com/harivilla_cha_raja?igsh=dnZhcnN0OGx1Yzht">Instagram</a> · <a
+                href="https://www.facebook.com/share/1akLMdp8GP/?mibextid=wwXIfr">Facebook</a> · <a
+                href="https://www.youtube.com/@HarivillaChaRaja">YouTube</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="fsub">✨ A Legacy Since 2001</div>
+  <footer>
 
-      <div class="fsub">🤝 Organized by Shree Harihareshwar Mahadev Mitra Mandal</div>
+    <div class="footer-content">
 
-      <div class="fsocial">
+      <!-- Logo Section -->
+      <div class="footer-left">
+        <img src="New Logo BG.png" alt="Harivilla Cha Raja Logo" class="footer-logo">
+      </div>
 
-  <a href="https://www.instagram.com/harivilla_cha_raja?igsh=dnZhcnN0OGx1Yzht" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
+      <!-- Information Section -->
+      <div class="footer-right">
 
-  <a href="https://www.facebook.com/share/1akLMdp8GP/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
+        <h3 class="fmark">Ganpati Bappa Morya 🙏</h3>
 
-  <a href="https://www.youtube.com/@HarivillaChaRaja" target="_blank" aria-label="YouTube">
-    <i class="fab fa-youtube"></i>
-  </a>
+        <div class="fsub">📍 Ahmedabad, Gujarat</div>
 
-</div>
+        <div class="fsub">✨ A Legacy Since 2001</div>
 
-      <div class="fine">
-        © <span id="year"></span> Harivilla Cha Raja. All Rights Reserved.
+        <div class="fsub">🤝 Organized by Shree Harihareshwar Mahadev Mitra Mandal</div>
+
+        <div class="fsocial">
+
+          <a href="https://www.instagram.com/harivilla_cha_raja?igsh=dnZhcnN0OGx1Yzht" target="_blank"
+            aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://www.facebook.com/share/1akLMdp8GP/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a href="https://www.youtube.com/@HarivillaChaRaja" target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+
+        </div>
+
+        <div class="fine">
+          © <span id="year"></span> Harivilla Cha Raja. All Rights Reserved.
+        </div>
+
       </div>
 
     </div>
 
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+    <img id="lightboxImg" src="" alt="">
   </div>
 
-</footer>
-
-<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
-
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
-  <img id="lightboxImg" src="" alt="">
-</div>
-
-<script>
-/* Floating petals */
-const petalsHost = document.getElementById("petals");
-const PETAL_COUNT = 14;
-for (let i = 0; i < PETAL_COUNT; i++) {
-  const p = document.createElement("span");
-  p.className = "petal";
-  const left = Math.random() * 100;
-  const duration = 9 + Math.random() * 8;
-  const delay = Math.random() * 10;
-  const drift = (Math.random() * 80 - 40) + "px";
-  const size = 6 + Math.random() * 8;
-  p.style.left = left + "%";
-  p.style.width = size + "px";
-  p.style.height = size + "px";
-  p.style.animationDuration = duration + "s";
-  p.style.animationDelay = "-" + delay + "s";
-  p.style.setProperty("--drift", drift);
-  petalsHost.appendChild(p);
-}
-
-/* Scroll progress bar */
-const progressEl = document.getElementById("progress");
-function updateProgress(){
-  const h = document.documentElement;
-  const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
-  progressEl.style.width = (isFinite(scrolled) ? scrolled : 0) + "%";
-}
-
-/* Nav scrolled state + back-to-top visibility */
-const mainNav = document.getElementById("mainNav");
-const toTopBtn = document.getElementById("toTop");
-function onScroll(){
-  updateProgress();
-  if (window.scrollY > 30) mainNav.classList.add("scrolled"); else mainNav.classList.remove("scrolled");
-  if (window.scrollY > 500) toTopBtn.classList.add("show"); else toTopBtn.classList.remove("show");
-}
-window.addEventListener("scroll", onScroll, { passive: true });
-onScroll();
-toTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
-
-/* Mobile nav toggle */
-const navToggle = document.getElementById("navToggle");
-const navLinks = document.getElementById("navLinks");
-const navBackdrop = document.getElementById("navBackdrop");
-function closeMenu(){
-  navLinks.classList.remove("open");
-  navBackdrop.classList.remove("show");
-  navToggle.setAttribute("aria-expanded", "false");
-  document.body.classList.remove("menu-open");
-}
-function openMenu(){
-  navLinks.classList.add("open");
-  navBackdrop.classList.add("show");
-  navToggle.setAttribute("aria-expanded", "true");
-  document.body.classList.add("menu-open");
-}
-navToggle.addEventListener("click", () => {
-  navLinks.classList.contains("open") ? closeMenu() : openMenu();
-});
-navBackdrop.addEventListener("click", closeMenu);
-navLinks.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
-document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeMenu(); closeLightbox(); } });
-window.addEventListener("resize", () => { if (window.innerWidth > 880) closeMenu(); });
-
-/* Active nav link highlighting */
-const navAnchors = document.querySelectorAll('[data-nav]');
-const sections = Array.from(navAnchors).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-const navObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = "#" + entry.target.id;
-      navAnchors.forEach(a => a.classList.toggle("active", a.getAttribute("href") === id));
+  <script>
+    /* Floating petals */
+    const petalsHost = document.getElementById("petals");
+    const PETAL_COUNT = 14;
+    for (let i = 0; i < PETAL_COUNT; i++) {
+      const p = document.createElement("span");
+      p.className = "petal";
+      const left = Math.random() * 100;
+      const duration = 9 + Math.random() * 8;
+      const delay = Math.random() * 10;
+      const drift = (Math.random() * 80 - 40) + "px";
+      const size = 6 + Math.random() * 8;
+      p.style.left = left + "%";
+      p.style.width = size + "px";
+      p.style.height = size + "px";
+      p.style.animationDuration = duration + "s";
+      p.style.animationDelay = "-" + delay + "s";
+      p.style.setProperty("--drift", drift);
+      petalsHost.appendChild(p);
     }
-  });
-}, { rootMargin: "-40% 0px -55% 0px" });
-sections.forEach(s => navObserver.observe(s));
 
-/* Countdown to Ganesh Chaturthi */
-const target = new Date("September 14, 2026 00:00:00").getTime();
-const countdownEl = document.getElementById("countdown");
-setInterval(() => {
-  const now = new Date().getTime();
-  const d = target - now;
-  if (d < 0) { countdownEl.innerHTML = "Ganesh Chaturthi is Here!"; return; }
-  const days = Math.floor(d / (1000 * 60 * 60 * 24));
-  const hrs = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const mins = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
-  const secs = Math.floor((d % (1000 * 60)) / 1000);
-  countdownEl.innerHTML = `${days}d ${hrs}h ${mins}m ${secs}s`;
-}, 1000);
-
-/* Footer year */
-document.getElementById("year").textContent = new Date().getFullYear();
-
-/* Scroll reveal + stagger + counters */
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('in');
-      e.target.querySelectorAll('.stagger').forEach(s => s.classList.add('in'));
-      e.target.querySelectorAll('.counter').forEach(animateCounter);
-      io.unobserve(e.target);
+    /* Scroll progress bar */
+    const progressEl = document.getElementById("progress");
+    function updateProgress() {
+      const h = document.documentElement;
+      const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+      progressEl.style.width = (isFinite(scrolled) ? scrolled : 0) + "%";
     }
-  });
-}, { threshold: 0.15 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-function animateCounter(el){
-  const target = parseInt(el.dataset.target, 10);
-  const suffix = el.dataset.suffix || "";
-  const duration = 1200;
-  const start = performance.now();
-  function tick(now){
-    const p = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - p, 3);
-    el.textContent = Math.round(eased * target) + suffix;
-    if (p < 1) requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-}
+    /* Nav scrolled state + back-to-top visibility */
+    const mainNav = document.getElementById("mainNav");
+    const toTopBtn = document.getElementById("toTop");
+    function onScroll() {
+      updateProgress();
+      if (window.scrollY > 30) mainNav.classList.add("scrolled"); else mainNav.classList.remove("scrolled");
+      if (window.scrollY > 500) toTopBtn.classList.add("show"); else toTopBtn.classList.remove("show");
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    toTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-/* Gallery lightbox */
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightboxImg");
-const lightboxClose = document.getElementById("lightboxClose");
-function openLightbox(src, alt){
-  lightboxImg.src = src;
-  lightboxImg.alt = alt;
-  lightbox.classList.add("open");
-  document.body.classList.add("menu-open");
-}
-function closeLightbox(){
-  lightbox.classList.remove("open");
-  document.body.classList.remove("menu-open");
-}
-document.querySelectorAll('[data-lightbox] img').forEach(img => {
-  img.addEventListener('click', () => openLightbox(img.src, img.alt));
-});
-lightboxClose.addEventListener("click", closeLightbox);
-lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
-</script>
+    /* Mobile nav toggle */
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+    const navBackdrop = document.getElementById("navBackdrop");
+    function closeMenu() {
+      navLinks.classList.remove("open");
+      navBackdrop.classList.remove("show");
+      navToggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("menu-open");
+    }
+    function openMenu() {
+      navLinks.classList.add("open");
+      navBackdrop.classList.add("show");
+      navToggle.setAttribute("aria-expanded", "true");
+      document.body.classList.add("menu-open");
+    }
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.contains("open") ? closeMenu() : openMenu();
+    });
+    navBackdrop.addEventListener("click", closeMenu);
+    navLinks.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeMenu(); closeLightbox(); } });
+    window.addEventListener("resize", () => { if (window.innerWidth > 880) closeMenu(); });
+
+    /* Active nav link highlighting */
+    const navAnchors = document.querySelectorAll('[data-nav]');
+    const sections = Array.from(navAnchors).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = "#" + entry.target.id;
+          navAnchors.forEach(a => a.classList.toggle("active", a.getAttribute("href") === id));
+        }
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    sections.forEach(s => navObserver.observe(s));
+
+    /* Countdown to Ganesh Chaturthi */
+    const target = new Date("September 14, 2026 00:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+    setInterval(() => {
+      const now = new Date().getTime();
+      const d = target - now;
+      if (d < 0) { countdownEl.innerHTML = "Bappa is arrived!"; return; }
+      const days = Math.floor(d / (1000 * 60 * 60 * 24));
+      const hrs = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((d % (1000 * 60)) / 1000);
+      countdownEl.innerHTML = `${days}d ${hrs}h ${mins}m ${secs}s`;
+    }, 1000);
+
+    /* Footer year */
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    /* Scroll reveal + stagger + counters */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          e.target.querySelectorAll('.stagger').forEach(s => s.classList.add('in'));
+          e.target.querySelectorAll('.counter').forEach(animateCounter);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.target, 10);
+      const suffix = el.dataset.suffix || "";
+      const duration = 1200;
+      const start = performance.now();
+      function tick(now) {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    /* Gallery lightbox */
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const lightboxClose = document.getElementById("lightboxClose");
+    function openLightbox(src, alt) {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      lightbox.classList.add("open");
+      document.body.classList.add("menu-open");
+    }
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      document.body.classList.remove("menu-open");
+    }
+    document.querySelectorAll('[data-lightbox] img').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    });
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+  </script>
 
 </body>
+
 </html>
